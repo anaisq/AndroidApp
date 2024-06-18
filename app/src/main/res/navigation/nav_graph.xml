@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loginFragment">
+
+    <!--suppress NavigationFile -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.unibuc.appointmentapp.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_bookingFragment"
+            app:destination="@id/bookingFragment" />
+    </fragment>
+
+    <!--suppress NavigationFile -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.unibuc.appointmentapp.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <!--suppress NavigationFile -->
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.unibuc.appointmentapp.BookingFragment"
+        android:label="Bookings"
+        tools:layout="@layout/fragment_booking">
+        <action
+            android:id="@+id/action_addAppointment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.unibuc.appointmentapp.AddFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_add">
+    </fragment>
+</navigation>

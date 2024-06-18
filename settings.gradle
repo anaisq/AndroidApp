@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AppointmentSystem"
-include(":app")
+rootProject.name = "AppointmentApp"
+include ':app'
